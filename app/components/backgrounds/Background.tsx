@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import LightRays from "./effects/LightRays";
+import SideRays from "./effects/SideRays";
 
 interface BackgroundProps {
   children: ReactNode;
@@ -9,7 +10,20 @@ const Background = ({ children }: BackgroundProps) => {
   return (
     <div className="relative h-dvh w-dvw justify-center bg-black overflow-hidden">
       <div className="absolute inset-0">
-        <LightRays
+        <SideRays
+          speed={2.5}
+          rayColor1="#EAB308"
+          rayColor2="#96c8ff"
+          intensity={2}
+          spread={2}
+          origin="top-right"
+          tilt={0}
+          saturation={1.5}
+          blend={0.75}
+          falloff={1.6}
+          opacity={1}
+        />
+        {/* <LightRays
           raysOrigin="top-center"
           raysColor="#3F00FF"
           raysSpeed={1}
@@ -23,7 +37,7 @@ const Background = ({ children }: BackgroundProps) => {
           pulsating={false}
           fadeDistance={1.2}
           saturation={1}
-        />
+        /> */}
       </div>
       {children}
     </div>
