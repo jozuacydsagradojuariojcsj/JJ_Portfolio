@@ -7,11 +7,15 @@ export default function Home() {
   return (
     <>
       <Background>
-        <Navbar />
+        <div className="h-full flex flex-col items-end justify-evenly">
+          <div className=" border border-white">Content</div>
+          <Navbar />
+        </div>
+        {/* <Navbar />
 
         <div className="z-10 w-full h-full flex">
           <HeroSection />
-        </div>
+        </div> */}
       </Background>
     </>
   );

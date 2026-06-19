@@ -1,12 +1,19 @@
 "use client";
 import { useState } from "react";
-import { IoMenu } from "react-icons/io5";
+import {
+  IoMenu,
+  IoHome,
+  IoInformationCircleOutline,
+  IoFolderOpen,
+} from "react-icons/io5";
+import { IoMdContact } from "react-icons/io";
 import { AnimatePresence } from "motion/react";
 import Button from "./Button";
 import IconButton from "./IconButton";
 import Menu from "../layout/Menu";
 
 const Navbar = () => {
+  const [activeTab, setActiveTab] = useState("home");
   const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => setShowMenu(true);
@@ -24,8 +31,35 @@ const Navbar = () => {
         <Button text="Projects" />
         <Button text="Contact" />
       </nav>
-      <nav className="text-white font-mono flex flex-row justify-between border border-green-500 p-2 sm:hidden">
-        <IconButton onClick={openMenu} icon={<IoMenu />} />
+      <nav className="fixed w-full bottom-0 h-17 flex flex-row justify-between xs:justify-evenly border-2 border-dark-primary sm:hidden z-50 dark:bg-dark-foreground rounded-t-sm">
+        <IconButton
+          active={activeTab === "home"}
+          onClick={() => {
+            setActiveTab("home");
+          }}
+          icon={<IoHome />}
+        />
+        <IconButton
+          active={activeTab === "about"}
+          onClick={() => {
+            setActiveTab("about");
+          }}
+          icon={<IoInformationCircleOutline />}
+        />
+        <IconButton
+          active={activeTab === "projects"}
+          onClick={() => {
+            setActiveTab("projects");
+          }}
+          icon={<IoFolderOpen />}
+        />
+        <IconButton
+          active={activeTab === "contact"}
+          onClick={() => {
+            setActiveTab("contact");
+          }}
+          icon={<IoMdContact />}
+        />
       </nav>
     </>
   );
