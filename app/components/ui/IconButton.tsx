@@ -11,10 +11,6 @@ interface IconButtonProps {
 const IconButton = ({ icon, onClick, active }: IconButtonProps) => {
   return (
     <motion.button
-      animate={{
-        backgroundColor: "var(--primary)",
-        color: "var(--foreground)",
-      }}
       whileHover={{
         backgroundColor: "#3a3d3b",
         color: "#ffffff",
@@ -22,9 +18,11 @@ const IconButton = ({ icon, onClick, active }: IconButtonProps) => {
       whileTap={{ scale: 0.99, y: 1, backgroundColor: "#555756" }}
       transition={{ type: "tween", damping: 5 }}
       onClick={onClick}
-      className="size-10 flex flex-1 flex-row justify-center items-center z-50 h-full rounded-md p-2 dark:bg-dark-foreground"
+      className="size-10 flex flex-1 flex-row justify-center items-center z-50 h-full rounded-md p-2 bg-inherit"
     >
-      <span className={`text-2xl ${active ? `text-violet-500` : `text-white`}`}>
+      <span
+        className={`text-2xl ${active ? `text-(--popover-icon-active)` : `text-(--popover-icon)`}`}
+      >
         {icon}
       </span>
     </motion.button>

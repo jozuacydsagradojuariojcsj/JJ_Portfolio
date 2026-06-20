@@ -25,13 +25,37 @@ const Navbar = () => {
         {showMenu && <Menu onClose={closeMenu} />}
       </AnimatePresence>
 
-      <nav className="text-white font-mono hidden sm:flex flex-row justify-evenly border-green-500 p-2 w-3/4 fixed top-6 z-50 border backdrop-blur-3xl left-1/2 -translate-x-1/2">
-        <Button text="Home" />
-        <Button text="About" />
-        <Button text="Projects" />
-        <Button text="Contact" />
+      <nav className="text-white font-mono hidden sm:flex flex-row justify-evenly p-2 w-full fixed top-0 z-50 h-17 backdrop-blur-3xl dark:border-2 dark:border-popover-icon rounded-b-md shadow-2xl">
+        <Button
+          active={activeTab === "home"}
+          onClick={() => {
+            setActiveTab("home");
+          }}
+          text="Home"
+        />
+        <Button
+          active={activeTab === "about"}
+          onClick={() => {
+            setActiveTab("about");
+          }}
+          text="About"
+        />
+        <Button
+          active={activeTab === "projects"}
+          onClick={() => {
+            setActiveTab("projects");
+          }}
+          text="Projects"
+        />
+        <Button
+          active={activeTab === "contact"}
+          onClick={() => {
+            setActiveTab("contact");
+          }}
+          text="Contact"
+        />
       </nav>
-      <nav className="fixed w-full bottom-0 h-17 flex flex-row justify-between xs:justify-evenly border-2 border-dark-primary sm:hidden z-50 dark:bg-dark-foreground rounded-t-sm">
+      <nav className="fixed w-full bottom-0 h-17 flex flex-row justify-between xs:justify-evenly dark:border-2 dark:border-popover-icon sm:hidden z-50 rounded-t-sm shadow-black shadow-lg">
         <IconButton
           active={activeTab === "home"}
           onClick={() => {

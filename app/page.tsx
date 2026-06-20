@@ -1,4 +1,5 @@
 import Background from "./components/backgrounds/Background";
+import Layout from "./components/layout/Layout";
 import Menu from "./components/layout/Menu";
 import HeroSection from "./components/sections/HeroSection";
 import Navbar from "./components/ui/Navbar";
@@ -6,17 +7,11 @@ import Navbar from "./components/ui/Navbar";
 export default function Home() {
   return (
     <>
-      <Background>
-        <div className="h-full flex flex-col items-end justify-evenly">
-          <div className=" border border-white">Content</div>
-          <Navbar />
-        </div>
-        {/* <Navbar />
-
-        <div className="z-10 w-full h-full flex">
+      <Layout>
+        <div className="h-full flex flex-col items-center justify-center">
           <HeroSection />
-        </div> */}
-      </Background>
+        </div>
+      </Layout>
     </>
   );
 }

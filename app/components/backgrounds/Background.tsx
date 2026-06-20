@@ -8,7 +8,7 @@ interface BackgroundProps {
 
 const Background = ({ children }: BackgroundProps) => {
   return (
-    <div className="relative h-dvh w-dvw bg-white dark:bg-dark-background overflow-hidden">
+    <div className="relative h-dvh w-dvw bg-background overflow-hidden">
       <div className="absolute inset-0">
         <SideRays
           speed={2.5}

@@ -11,10 +11,6 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-
-  --color-dark-background: #1c1c1d;
-  --color-dark-foreground: #252728;
-  --color-dark-divider: #37393a;
 }
 
 @theme inline {
@@ -73,11 +69,13 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #f2f4f7;
+  --foreground: #000000;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
+  --popover: #ffffff;
+  --popover-icon: #65686c;
+  --popover-icon-active: #000000;
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
@@ -109,10 +107,12 @@
 
 .dark {
   --background: #1c1c1d;
-  --foreground: #252728;
+  --foreground: #ffffff;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: #252728;
+  --popover-icon: #65686c;
+  --popover-icon-active: #7615e8;
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
