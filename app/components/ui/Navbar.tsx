@@ -25,7 +25,7 @@ const Navbar = () => {
         {showMenu && <Menu onClose={closeMenu} />}
       </AnimatePresence>
 
-      <nav className="text-white font-mono hidden sm:flex flex-row justify-evenly p-2 w-full fixed top-0 z-50 h-17 backdrop-blur-3xl dark:border-2 dark:border-popover-icon rounded-b-md shadow-2xl">
+      <nav className="text-white font-mono hidden sm:flex flex-row justify-evenly p-2 w-full fixed top-0 z-50 h-17 backdrop-blur-3xl bg-popover dark:border-2 dark:border-popover-icon rounded-b-md shadow-2xl">
         <Button
           active={activeTab === "home"}
           onClick={() => {
@@ -55,7 +55,7 @@ const Navbar = () => {
           text="Contact"
         />
       </nav>
-      <nav className="fixed w-full bottom-0 h-17 flex flex-row justify-between xs:justify-evenly dark:border-2 dark:border-popover-icon sm:hidden z-50 rounded-t-sm shadow-black shadow-lg">
+      <nav className="fixed w-full bottom-0 h-17 flex flex-row justify-between xs:justify-evenly bg-popover dark:border-2 dark:border-popover-icon sm:hidden z-50 rounded-t-sm shadow-black shadow-lg">
         <IconButton
           active={activeTab === "home"}
           onClick={() => {

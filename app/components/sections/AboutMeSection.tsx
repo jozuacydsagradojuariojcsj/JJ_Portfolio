@@ -3,16 +3,12 @@ import image from "@/app/assets/images/image.jpg";
 
 const AboutMeSection = () => {
   return (
-    <main className="font-mono flex flex-col sm:flex-row text-center items-center border border-yellow-500 h-full w-full overflow-y-auto text-xs z-5">
-      <img
-        className="object-cover object-top rounded-full sm:rounded-3xl size-50 lg:size-100 border-5 border--popover-icon shadow-gray-700 shadow-lg"
-        src={image.src}
-        alt="JJ"
-      />
-      <div className="flex flex-col gap-y-5 p-2">
-        <h1 className="font-bold text-base">
+    <section className="font-mono flex flex-col md:flex-row md:justify-evenly min-h-dvh items-start z-5 p-2 text-foreground border border-yellow-500 gap-5">
+      <div className="flex flex-col gap-y-5 text-xs sm:text-base md:text-center w-full">
+        <h1 className="text-4xl font-bold pb-5">About Me</h1>
+        <h2 className="font-bold text-base sm:text-2xl">
           Hello I am Jozua Cyd Juario a developer based in Philippines
-        </h1>
+        </h2>
         <p>
           Good Day, I am Jozua Cyd a developer based in Philippines, in Cagayan
           de Oro City.
@@ -34,7 +30,41 @@ const AboutMeSection = () => {
           I never would have thought about before.
         </p>
       </div>
-    </main>
+      <div className="flex flex-col md:text-center w-full">
+        <h1 className="text-4xl font-bold pb-5">Technologies</h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <h3 className="font-bold">Frontend</h3>
+            <p>React</p>
+            <p>Next.js</p>
+            <p>TypeScript</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold">Backend</h3>
+            <p>Django</p>
+            <p>Express.js</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold">Database</h3>
+            <p>PostgreSQL</p>
+            <p>MySQL</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold">Tools</h3>
+            <p>Git</p>
+            <p>Docker</p>
+          </div>
+          <div>
+            <h3 className="font-bold">Mobile</h3>
+            <p>Flutter</p>
+            <p>React Native</p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

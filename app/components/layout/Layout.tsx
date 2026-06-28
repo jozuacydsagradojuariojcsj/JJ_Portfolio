@@ -8,7 +8,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Background>
-      <div className="h-full w-full flex items-center justify-center pb-17 sm:pt-17 sm:pb-0">
+      <div className="min-h-full w-full flex pb-17 sm:pt-17 sm:pb-0">
         {children}
       </div>
       <Navbar />
