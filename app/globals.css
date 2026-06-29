@@ -49,6 +49,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-button: var(--button);
+  --color-button-foreground: var(--button-foreground);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -77,6 +79,8 @@
   --popover-icon: #65686c;
   --popover-icon-active: #000000;
   --popover-foreground: oklch(0.145 0 0);
+  --button: #000000;
+  --button-foreground: #f2f4f7;
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
@@ -108,12 +112,14 @@
 .dark {
   --background: #1c1c1d;
   --foreground: #ffffff;
-  --card: oklch(0.205 0 0);
+  --card: #252728;
   --card-foreground: oklch(0.985 0 0);
   --popover: #252728;
   --popover-icon: #65686c;
   --popover-icon-active: #7615e8;
   --popover-foreground: oklch(0.985 0 0);
+  --button: #f2f4f7;
+  --button-foreground: #000000;
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
